@@ -1,0 +1,20 @@
+const button = document.getElementById('contactBtn');
+
+button.addEventListener('click', () => {
+  alert('Message Sent Successfully!');
+});
+
+const portfolioGrid = document.getElementById('portfolioGrid');
+
+for (let i = 1; i <= 100; i++) {
+  const card = document.createElement('div');
+  card.classList.add('card');
+
+  card.innerHTML = `
+    <img src="https://picsum.photos/400/300?random=${i}" alt="Logo ${i}">
+    <h3>Logo Design ${i}</h3>
+    <p>Modern Minimal Logo</p>
+  `;
+
+  portfolioGrid.appendChild(card);
+}
